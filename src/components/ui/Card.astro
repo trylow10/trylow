@@ -1,5 +1,5 @@
 ---
-import linksImg from '@public/assets/images/links-line.svg';
+import linksImg from '../../../public/links-line.svg';
 import { Image } from 'astro:assets';
 import Tags from '@components/ui/Tags.astro';
 interface Props {
@@ -22,7 +22,7 @@ const { link = '#', description = 'Project Description', title = 'Project title'
 		class="rounded-xl bg-white p-3 shadow-lg duration-100 hover:scale-105 hover:transform hover:shadow-xl"
 	>
 		<a href={link} aria-label="link to project">
-			<div class="relative flex items-end overflow-hidden rounded-xl">
+      <div class="relative flex items-end overflow-hidden rounded-xl aspect-w-3 aspect-h-2">
 				<Image
 				src={(typeof projectImage === 'object') ? projectImage.url : projectImage}
 				alt={(typeof projectImage === 'object') ? projectImage.alt : 'Default Alt Text'}
@@ -30,14 +30,16 @@ const { link = '#', description = 'Project Description', title = 'Project title'
 					width={400}
 					height={400}
 					loading="eager"
-				/>
+					class="object-cover object-center"
+					/>
 			</div>
 			<div class="mt-1 p-2">
 				<h3 class="text-xl text-orange lg:text-2xl">{title}</h3>
 				<p class="text-s text-black">{description}</p><br>
-				<a href={link} target="_blank" rel="noopener noreferrer">
-					<Image src={linksImg} alt="Link Icon" />
-				</a>
+				<a href={link} target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center text-orange">
+          <Image src={linksImg} alt="Link Icon" class="mr-2" />
+          Visit Project
+        </a>
 				<Tags tags={tags} />
 			</div>
 		</a>

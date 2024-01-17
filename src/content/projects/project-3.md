@@ -1,13 +1,17 @@
 ---
 inProgress: false
-title: Example Project
-description: This is a sample project description.
+title: Crop and Fertilizer Prediction
+description: >
+  Crop Fertilizer Prediction is a Python application that utilizes the Random Forest algorithm
+  for predicting the optimal fertilizer for crops.
 tags:
-  - React
-  - CSS
-  - TypeScript
-link: https://example.com
+  - Python
+  - Random Forest
+  - Data Science
+  - Machine Learning
+link: https://github.com/trylow10/Crop-fertilizer-prediction
+
 projectImage:
-  url: /assets/images/project3.jpg
-  alt: Example Project Image
+  url: /project3.png
+  alt: project image
 ---

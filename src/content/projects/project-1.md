@@ -11,6 +11,6 @@ tags:
   - Postgres
   - Node
 projectImage:
-  url: /assets/images/project1.png
+  url: /project1.png
   alt: tripToKailash
 ---

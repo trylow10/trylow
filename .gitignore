@@ -1,8 +1,19 @@
-node_modules
-dist
-.astro
+# Ignore Node.js related files and directories
+node_modules/
+/dist/
+
+# Ignore Astro specific files and directories
+/.astro/
+
+# Ignore test-related directories
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-.vscode
+
+# Ignore Visual Studio Code specific files and directories
+/.vscode/
+
+# Ignore other temporary or generated files
+.DS_Store
+Thumbs.db

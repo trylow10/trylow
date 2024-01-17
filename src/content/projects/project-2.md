@@ -13,6 +13,6 @@ tags:
   - Node.js
   - ImageKit SDK
 projectImage:
-  url: /assets/images/project2.jpg
+  url: /project2.jpg
   alt: jobhub
 ---
