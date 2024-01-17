@@ -1,8 +1,13 @@
 ---
 inProgress: false
-title: Project title
-description: Project description
-img_alt: project image alt text
-link: https://github.com/veranikabarel?tab=repositories
-tags: ['React', 'CSS', 'Typescript']
+title: Example Project
+description: This is a sample project description.
+tags:
+  - React
+  - CSS
+  - TypeScript
+link: https://example.com
+projectImage:
+  url: /assets/images/project3.jpg
+  alt: Example Project Image
 ---

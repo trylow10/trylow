@@ -1,8 +1,16 @@
 ---
 inProgress: false
-title: Project title
-description: Project description
-img_alt: project image alt text
-link: https://github.com/veranikabarel?tab=repositories
-tags: ['React', 'CSS', 'Typescript']
+title: Trip to Kailash
+description: "Explore seamless tour reservations, captivating itineraries, and a user-friendly interface. Your spiritual journey begins here, where technology meets transcendence."
+link: https://www.mtkailashtrip.com/
+tags:
+  - Strapi
+  - NextJs
+  - TS
+  - Docker
+  - Postgres
+  - Node
+projectImage:
+  url: /assets/images/project1.png
+  alt: tripToKailash
 ---

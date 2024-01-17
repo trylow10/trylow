@@ -1,30 +1,32 @@
 ---
-import projectImage from '@assets/images/project.png';
+import linksImg from '@public/assets/images/links-line.svg';
 import { Image } from 'astro:assets';
 import Tags from '@components/ui/Tags.astro';
 interface Props {
-	url?: string;
-	alt?: string;
+	link?: string;
 	title?: string;
 	description: string;
 	tags: string[];
+	projectImage: {
+		url: string;
+		alt: string;
+	} | any;
 	children?: HTMLElement | HTMLElement[];
 }
 
-const { url = '#', alt = 'Project image', description = 'Project Description', title = 'Project title', tags = ['Tags'] } = Astro.props;
+const { link = '#', description = 'Project Description', title = 'Project title', tags = ['Tags'], projectImage } = Astro.props;
 ---
-
 <section class="w-full p-4 md:w-1/2 lg:w-1/3">
 	<article
 		data-testId="card"
 		class="rounded-xl bg-white p-3 shadow-lg duration-100 hover:scale-105 hover:transform hover:shadow-xl"
 	>
-		<a href={url} aria-label="link to project">
+		<a href={link} aria-label="link to project">
 			<div class="relative flex items-end overflow-hidden rounded-xl">
 				<Image
-					src={projectImage}
-					alt={alt}
-					format="png"
+				src={(typeof projectImage === 'object') ? projectImage.url : projectImage}
+				alt={(typeof projectImage === 'object') ? projectImage.alt : 'Default Alt Text'}
+					format="auto"
 					width={400}
 					height={400}
 					loading="eager"
@@ -32,7 +34,10 @@ const { url = '#', alt = 'Project image', description = 'Project Description', t
 			</div>
 			<div class="mt-1 p-2">
 				<h3 class="text-xl text-orange lg:text-2xl">{title}</h3>
-				<p class="text-s text-black">{description}</p>
+				<p class="text-s text-black">{description}</p><br>
+				<a href={link} target="_blank" rel="noopener noreferrer">
+					<Image src={linksImg} alt="Link Icon" />
+				</a>
 				<Tags tags={tags} />
 			</div>
 		</a>
