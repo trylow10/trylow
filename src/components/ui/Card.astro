@@ -22,7 +22,7 @@ const { link = '#', description = 'Project Description', title = 'Project title'
 		class="rounded-xl bg-white p-3 shadow-lg duration-100 hover:scale-105 hover:transform hover:shadow-xl"
 	>
 		<a href={link} aria-label="link to project">
-      <div class="relative flex items-end overflow-hidden rounded-xl aspect-w-3 aspect-h-2">
+      <div class="relative flex items-end overflow-hidden rounded-xl aspect-w-3 aspect-h-2 h-48">
 				<Image
 				src={(typeof projectImage === 'object') ? projectImage.url : projectImage}
 				alt={(typeof projectImage === 'object') ? projectImage.alt : 'Default Alt Text'}
@@ -30,17 +30,16 @@ const { link = '#', description = 'Project Description', title = 'Project title'
 					width={400}
 					height={400}
 					loading="eager"
-					class="object-cover object-center"
+					class="object-cover object-center h-52"
 					/>
 			</div>
 			<div class="mt-1 p-2">
-				<h3 class="text-xl text-orange lg:text-2xl">{title}</h3>
-				<p class="text-s text-black">{description}</p><br>
+				<h3 class="text-orange lg:text-xl font-black">{title}</h3>
+				<p class=" text-black min-h-32 overflow-hidden font-medium">{description}</p><br>
 				<a href={link} target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center text-orange">
           <Image src={linksImg} alt="Link Icon" class="mr-2" />
           Visit Project
         </a>
-				<Tags tags={tags} />
 			</div>
 		</a>
 	</article>
