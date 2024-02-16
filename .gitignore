@@ -17,3 +17,4 @@ node_modules/
 # Ignore other temporary or generated files
 .DS_Store
 Thumbs.db
+.vercel
